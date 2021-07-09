@@ -69,7 +69,7 @@ Container components provide the structure of a MiniApp page. It may inculdes th
 There are three potential ways to define the MiniApp common UI components.
 
 **Option 1: HTML extension**:
-- Reuse the existing HTML5 UI components as much as possible and extend them to support the attributes and events required by the MiniApp;
+- Reuse the existing HTML5 label as much as possible and extend them to support the attributes and events required by the MiniApp;
 - To implement the standard Custom Elements and polyfill them;
 - Full compatibility with current HTML and DOM specs;
 - Alignment with OpenUI CG to define new elements (e.g., picker, tab).
@@ -98,4 +98,51 @@ The existing implementations use an MVVM approach with the following main featur
 
 
 ## 3. Comparison with existing standard UI components 
+
+The following table mainly describes the comparison between the MiniApp common UI components and W3C standards compontents:
+MiniApp Common UI Components | Attributes | Events | Similar Standard Component 
+:---    |:---    |:--        |:---     
+div | - | - | Constraint of standard attributes and different events
+list | - | scrollend | Element event scroll as the standard
+list-item | - | - | - |
+swiper | index, loop, vertical | change | - |
+tabs | index, vertical, disabled, focusable, data | - | tabs for HTML (OpenUI) |
+tab-bar | mode | - | - |
+tab-content | scrollable | - | CSS overflow: scroll |
+refresh | offset, type, refreshing, lasttime, friction, disabled, focusable, data | - | Similar to SwipeRefreshLayout, but more related to the user agent instead of the document. |
+image | src, alt, disabled, focusable & complete, error | - | &lt;img&gt; with attributes src and alt are the standard |
+progress | type, focusable, data | - | &lt;progress&gt; element (max, value, position, labels) |
+text | focusable, data | - | Similar to SVG’s text. |
+input | type, placeholder…, headericon, disable, focusable | change | input element (with all types supported), attribute disabled, no headericon. |
+button | type (styles instead of function), value, icon, waiting, focusable* | - | button element, attribute disabled, no waiting, no icon. (in OpenUI) |
+label | focusable | - | label element. Labelable elements: button, input, meter, output, progress, select, textarea |
+select | data | - | select element. Attribute disabled (in OpenUI) |
+slider | min, max, value, data | change | input@type=”range” (in OpenUI) |
+switch | - | - | - |
+picker | type (text, date, time, datetime, multi-text) | - | input element (date, time, datetime-local) and datalist element (with attribute options). |
+video | muted, src, autoplay, poster, controls | prepared, seeked, timeupdate, fullscreenchange | video element with all the attributes but (disable, and focusable) + vents: readyState, buffered  (but not prepared, seeked, timeupdate, fullscreenchange) |
+canvas | disable, focusable, data | - | canvas element |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
