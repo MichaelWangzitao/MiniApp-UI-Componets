@@ -65,34 +65,23 @@ Given the above problems, we select UI components common to existing widely depl
 Basic components provide the minimum interactive blocks that can be reused for the MiniApp. Developers can define the user interface of the MiniApp by combining these basic components. It may include the following components such as 'Image', 'Progress', 'Text', 'Input', 'Button', 'Label', 'Select', 'Slider', 'Switch', 'Picker', 'Video', and 'Canvas'.
 * **Container Components**:
 Container components provide the structure of a MiniApp page. It may inculdes the following components such as 'Div', 'List', 'Swiper', 'Tabs', and 'Refresh'.
+### Scope of work:
+The MiniApp Common UI Components specification aims to standardize on:
+- Component names and properties
+- States
+- Behaviors
+- How behaviors transition state 
+### Out of Scope:
+- Appearance of the component
+- Markup Language for MiniApp 
+
 ### How to standardize the common UI components
-There are three potential ways to define the MiniApp common UI components.
+Standardized MiniApp UI proposals will be based on the following principles:
+- Identify the scope of the common UI based on the existing implementation;
+- Reuse the existing standards as much as possible and extend them to support the attributes and events required by the MiniApp;
+- Alignment with standards bodies like OpenUI CG to define new elements (e.g., picker, tab).
 
-**Option 1: HTML extension**:
-- Reuse the existing HTML5 label as much as possible and extend them to support the attributes and events required by the MiniApp;
-- To implement the standard Custom Elements and polyfill them;
-- Full compatibility with current HTML and DOM specs;
-- Alignment with OpenUI CG to define new elements (e.g., picker, tab).
-
-**Option 2: A MiniAppsML**:
-- As an XML application with a formal XML syntax and structure specified in a DTD document;
-- Definition of CSS-compatible attributes for the basic elements (compatibility with CSS modules);
-- In this case, MiniApps would be defined in terms of the document object model (DOM);
-- Extension of the latest DOM (e.g., MiniAppElement);
-- Namespace for MiniApps elements: (e.g., http://www.w3.org/2021/miniapp)
-
-**Option 3: Variations of the MiniAppsML proposal**:
-- No DOM support;
-- No need for strict XML;
-- New CSS modules.
-### Challenges should be solved
-#### Compatible with existing implementations and W3C standard
-
-The existing implementations use an MVVM approach with the following main features:
-- Data interpolation using {{ moustache }} notation
-- One-way data-binding form
-- Event handling
-- Conditionals, loops for rendering
+### Key Considerations 
 
 #### How to implementate the standard MiniApp common UI components?
 
