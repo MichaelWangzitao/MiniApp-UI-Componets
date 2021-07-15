@@ -1,4 +1,4 @@
-# MiniApp UI Componets Explainer 
+# MiniApp UI Components Explainer 
 ## Authors
 Zitao Wang (Huawei)
 ## 1. Introduction
